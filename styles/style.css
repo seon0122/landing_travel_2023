@@ -1,45 +1,53 @@
 .title_bg {
     height:640px;
-    background:url(../images/title_bg.jpg) no-repeat;
+    background:url(../images/img.jpg) no-repeat;
     background-size:cover; background-position: center;
     position: relative;
 }
 .title_bg h1 {
     color:#fff; font-weight:700; font-size:2.369rem;
     line-height:80px; text-align:center;
-    position:absolute; right:116px; top:220px;
+    position:absolute; right:200px; top:200px;
 }
 .title_bg h1 em {font-size:3.157rem; font-weight:700;}
 .intro_bg {
-    height: 640px; background:#ddeeff;
+    height: 800px; background:#ddeeff;
 }
 .intro_bg .intro {
     background: yellow;
-    max-width:1200px; padding:100px 0;
+    max-width:1200px; height:100%; padding:100px 0;
     margin:0 auto;
     display: flex; flex-flow: row wrap;
+    position: relative;
 }
-.intro_bg .intro p {width: 590px; height: 290px;}
-.intro_bg .intro p img {width:100%;}
-
+.intro_bg .intro p {}
+.intro_bg .intro p img {
+    width: 590px; height: 290px;
+}
 
 .intro_bg .intro > * {
+    width:285px; height:288px;
     display: flex; flex-flow:column wrap;
     margin-right:20px;
-    width:calc(33.33% - 40px / 3);
+    /* width:calc(25% - 40px / 3); */
 }
 .intro_bg .intro a {
-    width:285px; height: 288px; background:pink;
+    background:pink; color:#fff; text-align: center; line-height:30px;
     display: inline-block;
 }
-.intro_bg .intro a em {}
+.intro_bg .intro a:nth-child(3) {position: relative; left:305px;}
+.intro_bg .intro a em {
+    font-size:1.5rem; font-weight:500;
+}
 .intro_bg .intro .garden {
-    width:100%;
+    width:285px; height:288px; background-size: cover; background-position: center;
     background:url(../images/garden.jpg) no-repeat;
+    margin-bottom:20px;
+    position: relative; left:305px;
 }
 .intro_bg .intro .garden em {}
 .intro_bg .intro .tracking {
-    width:100%;
+    width:285px; height:288px; background-size: cover; background-position: center;
     background:url(../images/pack.jpg);
 }
 .intro_bg .intro .tracking em {}
