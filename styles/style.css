@@ -14,40 +14,234 @@
     height: 800px; background:#ddeeff;
 }
 .intro_bg .intro {
-    background: yellow;
     max-width:1200px; height:100%; padding:100px 0;
     margin:0 auto;
-    display: flex; flex-flow: row wrap;
-    position: relative;
 }
-.intro_bg .intro p {}
-.intro_bg .intro p img {
+.intro_bg .intro .top {
+    width:1200px;
+    display: flex; flex-flow:row nowrap; justify-content: space-between;
+}
+.intro_bg .intro .top > * {
+    width:285px; height:290px;
+    margin-right: 20px;
+}
+.intro_bg .intro .top p {
+    width:100%;
+    color:#fff;
+}
+.intro_bg .intro .top p img {
     width: 590px; height: 290px;
 }
-
-.intro_bg .intro > * {
-    width:285px; height:288px;
-    display: flex; flex-flow:column wrap;
-    margin-right:20px;
-    /* width:calc(25% - 40px / 3); */
-}
-.intro_bg .intro a {
-    background:pink; color:#fff; text-align: center; line-height:30px;
-    display: inline-block;
-}
-.intro_bg .intro a:nth-child(3) {position: relative; left:305px;}
-.intro_bg .intro a em {
+.intro_bg .intro .top p span {
+    display: block;
+    width:285px; height: 290px; color:#fff;
     font-size:1.5rem; font-weight:500;
 }
-.intro_bg .intro .garden {
-    width:285px; height:288px; background-size: cover; background-position: center;
-    background:url(../images/garden.jpg) no-repeat;
-    margin-bottom:20px;
-    position: relative; left:305px;
+.intro_bg .intro .top p a {}
+.intro_bg .intro .top p a em {text-decoration: underline;}
+.intro_bg .intro .top .card {
+    width:285px; height: 290px; 
+    background:url(../images/garden.jpg);
+    background-size: cover; background-position: center;
 }
-.intro_bg .intro .garden em {}
-.intro_bg .intro .tracking {
-    width:285px; height:288px; background-size: cover; background-position: center;
+.intro_bg .intro > div span {
+    display: block;
+    padding-top:30px;
+    color:#fff; text-align: center;
+    font-size:1.5rem; font-weight:500;
+}
+.intro_bg .intro .top .card .sub {
+    width:285px;
+}
+.intro_bg .intro > div p {line-height: 30px;}
+.intro_bg .intro .top .card .sub a {}
+.intro_bg .intro .top .card .sub a em {text-decoration: underline;}
+.intro_bg .intro .top .card:hover {}
+.intro_bg .intro .top > div {margin-bottom:20px;}
+.intro_bg .intro .top > div,
+.intro_bg .intro .bottom > div {
+    text-align: center; line-height: 23px;
+    background:#093f77; color:#fff;
+}
+.intro_bg .intro .top div span {
+    display: block; width: 285px;
+    font-size:1.5rem; font-weight:500;
+}
+.intro_bg .intro .top div em {text-decoration: underline; color:#fff;}
+.intro_bg .intro .bottom {
+    width:1200px;
+    display: flex; flex-flow:row nowrap;
+}
+.intro_bg .intro .bottom > * {
+    width:285px; height:290px;
+    margin-right: 20px;
+}
+.intro_bg .intro .bottom p {color:#fff;}
+.intro_bg .intro .bottom p img {width: 590px; height:290px;}
+.intro_bg .intro .bottom p span {font-size:1.5rem; font-weight:500;}
+.intro_bg .intro .bottom div span {font-size:1.5rem; font-weight:500;}
+.intro_bg .intro .bottom div a em {color:#fff; text-decoration: underline;}
+.intro_bg .intro .bottom .card {
+    display: block; text-align: center;
+    width:285px; height: 290px; 
     background:url(../images/pack.jpg);
+    background-size: cover; background-position: center;
 }
-.intro_bg .intro .tracking em {}
+.intro_bg .intro .bottom .card span {
+    color:#fff; 
+    font-size:1.5rem; font-weight:500;
+}
+.intro_bg .intro .bottom .card .sub {
+    width:285px;
+}
+.intro_bg .intro .bottom .card .sub p {}
+.intro_bg .intro .bottom .card .sub a {}
+.intro_bg .intro .bottom .card .sub p a em {color:#fff; text-decoration: underline;}
+.attraction {
+    width:1200px; margin:0 auto; padding:100px 0;
+}
+.attraction h2 {
+    font-size:2.369rem; font-weight:500; text-align: center; padding-bottom:100px;
+}
+.attraction h2 em {
+    font-size:4.2rem; font-weight:700; line-height: 100px;
+}
+.attraction .contents1 {
+    height: 716px;
+    position: relative;
+}
+.attraction div .top {
+    display: flex; flex-flow: row nowrap; justify-content: space-between;
+}
+.attraction .contents1 .top {height:485px;}
+.attraction .contents1 .top p {}
+.attraction .contents1 .top p img {
+    width:760px; height: 485px; border-radius: 10px;
+}
+.attraction .contents1 .top p:nth-child(2) {
+    width: 420px; height: 485px;
+}
+.attraction .contents1 .top p img,
+.attraction .contents2 .top p img,
+.attraction .contents3 .top p img {width: 100%;}
+.attraction .contents1 .bottom {
+    margin-left:35px; 
+    position: absolute; top:360px;
+}
+.attraction div .bottom .title {
+    font-size:2rem; font-weight:700;
+}
+.attraction div .bottom p:first-child::before {
+    content:'';
+    width:1px; height:255px; background-color:#858585; display:inline-block;
+    margin-right: 20px;
+}
+.attraction .contents1 .bottom p:first-child::after {
+    content:'';
+    margin-right: 20px;
+    width:5px; height:85px; background-color: #000; display:block;
+    position:absolute; bottom:115px;
+}
+.attraction div .bottom p:last-child {
+    font-size:1.333rem; line-height: 38px; letter-spacing:-0.02em; 
+    color:#858585; padding-top:35px;
+}
+.attraction .contents2 {
+    height:840px;
+    margin:100px 0;
+    position: relative; 
+}
+.attraction .contents2 .top {height:451px;}
+.attraction .contents2 .top p {}
+.attraction .contents2 .top p img {
+    width:590px; height:451px; border-radius: 10px;
+}
+.attraction .contents2 .bottom {
+    margin-left:35px; 
+    position: absolute; top:330px; 
+}
+.attraction .contents2 .bottom p:first-child::after {
+    content:'';
+    margin-right: 20px;
+    width:5px; height:85px; background-color: #000; display:block;
+    position:absolute; top:173px;
+}
+.attraction .contents3 {
+    height:854px;
+    position: relative; 
+}
+.attraction .contents3 .top {}
+.attraction .contents3 .top .left img{
+    width:862px; height: 544px; border-radius: 10px;
+}
+.attraction .contents3 .top .right img {
+    background:#fff;
+    padding:20px 0 0 20px;
+    width: 481px; height: 605px; border-bottom-right-radius:10px;
+    position:absolute; left:719px; top:248px;
+}
+.attraction .contents3 .bottom {
+    margin-left:35px; 
+    position: absolute; top:420px;
+    height:426px; 
+}
+.attraction .contents3 .bottom p:first-child::after {
+    content:'';
+    margin-right: 20px;
+    width:5px; height:85px; background-color: #000; display:block;
+    position:absolute; bottom:169px;
+}
+.attraction .contents3 .top p {}
+.attraction .contents3 .top p img {}
+.attraction .contents3 .bottom {}
+.attraction .contents3 .bottom .title {}
+.attraction .contents3 .bottom p {}
+.photo_bg {
+    height:1117px;
+    background:url(../images/003.png) no-repeat;
+    background-position:center; background-size: cover;
+}
+.photo_bg .photozone {
+    width: 1200px; margin:0 auto; 
+}
+.photo_bg .photozone h2 {
+    font-size:2.369rem; font-weight:500; text-align: center; padding-top:100px;
+}
+.photo_bg .photozone h2 em {
+    font-size:4.2rem; font-weight:700; line-height: 100px;
+}
+.photo_bg .photozone .photo {
+    padding-top:100px;
+    display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;
+    position: relative;
+}
+.photo_bg .photozone .photo p img {width:100%;}
+.photo_bg .photozone .photo p span {
+    font-size:1.777rem; color:#000;
+    text-align: center;
+    display: block;
+}
+.photo_bg .photozone .photo .zone1,
+.photo_bg .photozone .photo .zone2,
+.photo_bg .photozone .photo .zone3 {
+    padding:30px 20px 40px 20px; background-color: #fff;
+    border:1px solid #000; 
+}
+.photo_bg .photozone .photo .zone1 img,
+.photo_bg .photozone .photo .zone3 img {
+    width:305px; height:386px;
+    border:1px solid #000;
+}
+.photo_bg .photozone .photo .zone1 span,
+.photo_bg .photozone .photo .zone2 span,
+.photo_bg .photozone .photo .zone3 span {
+    margin-top:30px;
+}
+.photo_bg .photozone .photo .zone2 {}
+.photo_bg .photozone .photo .zone2 img {
+    width:423px; height:545px; border:1px solid #000;
+}
+.photo_bg .photozone .photo .zone2 span {}
+.photo_bg .photozone .photo .zone3 {}
+.photo_bg .photozone .photo .zone3 img {}
+.photo_bg .photozone .photo .zone3 span {}
