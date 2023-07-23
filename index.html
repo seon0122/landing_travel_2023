@@ -6,6 +6,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>떠나요,거제</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -91,9 +92,9 @@
     <section class="activity">
         <h2>추천 액티비티</h2>
         <div class="contents">
-            <p><img src="./images/cable1.jpg" alt="파노라마 케이블카"></p>
-            <p><img src="./images/activity2.jpeg" alt="유람선,낚시체험"></p>
-            <p><img src="./images/acitivity.jpg" alt="소노캄 오션어드벤처"></p>
+            <p><img src="./images/cable1.jpg" alt="파노라마 케이블카">파노라마 케이블카</p>
+            <p><img src="./images/activity2.jpeg" alt="유람선,낚시체험">유람선,낚시체험</p>
+            <p><img src="./images/acitivity.jpg" alt="소노캄 오션어드벤처">소노캄 오션어드벤처</p>
         </div>
     </section>
     <section class="tour">
@@ -108,27 +109,34 @@
             </ul>
             <img src="./images/png/tour-bus.png" alt="">
         </div>
-        <a href="#" class="homepage">홈페이지 바로가기<img src="./images/png/Right.png" alt=""></a>
+        <a href="#" class="homepage">홈페이지 바로가기<i class="fa-solid fa-angle-right"></i></a>
     </section>
-    <section class="survey">
-        <h2>2023 관광 트렌드<br><em>나의 여행 선호도는?</em><img src="./images/png/luggage.png" alt=""></h2>
-        <div class="contents">
-            <p class="moment">M O M E N T</p>
-            <p>"<em>일상</em>의 <em>모든 순간</em>이 <em>여행</em>"</p>
-            <form id="surveyFrm" action="#" method="get">
-                <fieldset>
-                    <legend class="skip">선호도조사</legend>
-                    <ul>
-                        <li><label for="s1"><img src="./images/png/1m.png" alt=""><input type="radio" name="survey" id="s1"></label></li>
-                        <li><label for="s2"><img src="./images/png/2o.png" alt=""><input type="radio" name="survey" id="s2"></label></li>
-                        <li><label for="s3"><img src="./images/png/3m.png" alt=""><input type="radio" name="survey" id="s3"></label></li>
-                        <li><label for="s4"><img src="./images/png/4e.png" alt=""><input type="radio" name="survey" id="s4"></label></li>
-                        <li><label for="s5"><img src="./images/png/5n.png" alt=""><input type="radio" name="survey" id="s5"></label></li>
-                        <li><label for="s6"><img src="./images/png/6t.png" alt=""><input type="radio" name="survey" id="s6"></label></li>
-                    </ul>
-                    <button type="submit" id="answer_btn">결과 보기</button>
-                </fieldset>
-            </form>
+    <section class="survey_bg">
+        <div class="survey">
+            <div class="title">
+                <h2>2023 관광 트렌드<br><em>나의 여행 선호도는?</em></h2>
+                <img src="./images/png/luggage.png" alt="">
+            </div>
+            <div class="contents">
+                <div>
+                    <p class="moment">M O M E N T</p>
+                    <p>"일상의 모든 순간이 여행"</p>
+                </div>
+                <form id="surveyFrm" action="#" method="get">
+                    <fieldset>
+                        <legend class="skip">선호도조사</legend>
+                        <ul>
+                            <li><label for="s1"><img src="./images/png/m1.png" alt=""><input type="radio" name="survey" id="s1"></label></li>
+                            <li><label for="s2"><img src="./images/png/o2.png" alt=""><input type="radio" name="survey" id="s2"></label></li>
+                            <li><label for="s3"><img src="./images/png/m3.png" alt=""><input type="radio" name="survey" id="s3"></label></li>
+                            <li><label for="s4"><img src="./images/png/e4.png" alt=""><input type="radio" name="survey" id="s4"></label></li>
+                            <li><label for="s5"><img src="./images/png/n5.png" alt=""><input type="radio" name="survey" id="s5"></label></li>
+                            <li><label for="s6"><img src="./images/png/t6.png" alt=""><input type="radio" name="survey" id="s6"></label></li>
+                        </ul>
+                        <button type="submit" id="answer_btn">결과 보기</button>
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </section>
 </body>
