@@ -43,6 +43,35 @@
     width:285px; height: 290px; 
     background:url(../images/garden.jpg);
     background-size: cover; background-position: center;
+    position: relative; display: inline-block;
+}
+.intro_bg .intro .top .card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.3);
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.intro_bg .intro .bottom .card::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color:rgb(125 124 124 / 60%);
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+
+.intro_bg .intro .top .card:hover::before,
+.intro_bg .intro .bottom .card:hover::before {
+    opacity: 1;
 }
 .intro_bg .intro > div span {
     display: block;
@@ -50,8 +79,11 @@
     color:#fff; text-align: center;
     font-size:1.5rem; font-weight:500;
 }
-.intro_bg .intro .top .card .sub {
+.intro_bg .intro .top .card .sub,
+.intro_bg .intro .bottom .card .sub {
     width:285px;
+    position: relative;
+    z-index: 50;
 }
 .intro_bg .intro > div p {line-height: 30px;}
 .intro_bg .intro .top .card .sub a {}
@@ -60,12 +92,15 @@
 .intro_bg .intro .top > div {margin-bottom:20px;}
 .intro_bg .intro .top > div,
 .intro_bg .intro .bottom > div {
-    text-align: center; line-height: 23px;
+    text-align: center; line-height: 25px;
     background:#093f77; color:#fff;
 }
-.intro_bg .intro .top div span {
+.intro_bg .intro .top div span,
+.intro_bg .intro .bottom div span {
     display: block; width: 285px;
     font-size:1.5rem; font-weight:500;
+    position: relative;
+    z-index: 50;
 }
 .intro_bg .intro .top div em {text-decoration: underline; color:#fff;}
 .intro_bg .intro .bottom {
@@ -86,6 +121,7 @@
     width:285px; height: 290px; 
     background:url(../images/pack.jpg);
     background-size: cover; background-position: center;
+    position: relative; display: inline-block;
 }
 .intro_bg .intro .bottom .card span {
     color:#fff; 
@@ -199,7 +235,17 @@
 .photo_bg {
     height:1117px;
     background:url(../images/003.png) no-repeat;
+    position: relative;
     background-position:center; background-size: cover;
+    z-index: 100;
+}
+.photo_bg::after {
+    content:'';
+    height:1117px; width: 100%;
+    display:block; 
+    background: rgba(255,255,255,0.4);
+    position: absolute; left: 0; top:0;
+    z-index: -1;
 }
 .photo_bg .photozone {
     width: 1200px; margin:0 auto; 
@@ -220,10 +266,9 @@
     font-size:1.777rem; color:#000;
     text-align: center;
     display: block;
+    margin-top:30px;
 }
-.photo_bg .photozone .photo .zone1,
-.photo_bg .photozone .photo .zone2,
-.photo_bg .photozone .photo .zone3 {
+.photo_bg .photozone .photo p {
     padding:30px 20px 40px 20px; background-color: #fff;
     border:1px solid #000; 
 }
@@ -231,11 +276,6 @@
 .photo_bg .photozone .photo .zone3 img {
     width:305px; height:386px;
     border:1px solid #000;
-}
-.photo_bg .photozone .photo .zone1 span,
-.photo_bg .photozone .photo .zone2 span,
-.photo_bg .photozone .photo .zone3 span {
-    margin-top:30px;
 }
 .photo_bg .photozone .photo .zone2 {}
 .photo_bg .photozone .photo .zone2 img {
@@ -245,3 +285,129 @@
 .photo_bg .photozone .photo .zone3 {}
 .photo_bg .photozone .photo .zone3 img {}
 .photo_bg .photozone .photo .zone3 span {}
+.activity {
+    padding:100px 0; background: #f1f1f1;
+}
+.activity h2 {
+    font-size:3.157rem; font-weight:700; text-align: center; margin-bottom: 100px;
+}
+.activity .contents {
+    max-width: 1200px; margin:0 auto;
+    display: flex; flex-flow: row nowrap; 
+}
+.activity .contents p {
+    font-size: 1.333rem; letter-spacing:-0.02em; text-align: center;
+    width:calc(33.33% - 40px / 3);
+    margin-right: 20px;
+}
+.activity .contents p img {
+    width: 386px; height: 310px;
+    margin-bottom:30px;
+    border-radius: 10px;
+}
+.tour {
+    width:1200px; margin:0 auto;
+    padding:100px 0;
+    display: flex; flex-flow: column nowrap;
+}
+.tour h2 {
+    font-size:3.157rem; font-weight:700; text-align: center; margin-bottom: 100px;
+}
+.tour .citytour {
+    background:#ddeeff;
+    display: flex; flex-flow: row nowrap; justify-content: space-between; align-items: center;
+    padding:70px 50px;
+    border-top-right-radius:30px;
+    border-bottom-left-radius:30px;  
+}
+.tour .citytour ul {}
+.tour .citytour ul li:first-child {
+    margin-bottom:60px; 
+}
+.tour .citytour ul li span {
+    font-size:2.360rem; letter-spacing: -0.02em; font-weight:500; color:#093f77;
+}
+.tour .citytour ul li:nth-child(2),
+.tour .citytour ul li:nth-child(3),
+.tour .citytour ul li:nth-child(4) {
+    font-size: 1.333rem; letter-spacing:-0.02em; line-height: 50px;
+}
+.tour .citytour ul li:last-child {
+    margin-top:30px;
+}
+.tour .citytour ul li img {
+    width: 20px; height: 20px; margin-right: 10px; 
+}
+.tour .citytour > img {
+    width: 230px; height: 220px;
+}
+.tour .homepage {
+    background:#093f77; padding:20px 50px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    align-self: flex-end;
+}
+.tour > a {
+    color:#fff;
+    font-size: 1.333rem; font-weight:500;
+}
+.tour .homepage .fa-solid {
+    margin-left: 10px;
+}
+.survey_bg {background: #ddeeff; padding:100px 0;}
+.survey_bg .survey {
+    max-width:1200px; margin:0 auto; text-align: center;
+}
+.survey_bg .survey .title {
+    height: 128px;
+    display: flex; flex-flow: row nowrap;
+    justify-content:center; align-items: center; margin-bottom:80px;
+}
+.survey_bg .survey .title h2 {
+    font-size:1.75rem; font-weight:500; text-align: center; line-height: 90px;
+    margin-right:40px;
+}
+.survey_bg .survey .title h2 em {font-size:3.157rem; font-weight:700;}
+.survey_bg .survey .title img {}
+.survey_bg .survey .contents {}
+.survey_bg .survey .contents div {
+    display: flex; flex-flow: row nowrap; justify-content: center; align-items:center;
+}
+.survey_bg .survey .contents .moment {
+    background:#093f77; display:inline;
+    color:#fff; padding:15px 20px; border-radius: 10px;
+    font-size:1.333rem; font-weight: 500;
+}
+.survey_bg .survey .contents p {
+    color:#093f77; display: inline;
+    font-size:2.369rem; font-weight:500; margin-left: 24px;
+}
+.survey_bg .survey .contents p em {
+    font-size:2.369rem; font-weight:700;
+}
+.survey_bg .survey .contents #surveyFrm {}
+.survey_bg .survey .contents #surveyFrm fieldset {}
+.survey_bg .survey .contents #surveyFrm fieldset ul {
+    padding:50px 0; text-align: center;
+}
+.survey_bg .survey .contents #surveyFrm fieldset ul li {
+    display:inline-block; width:100px; height:180px;
+    width:calc(16.66% - 225px / 6);
+}
+.survey_bg .survey .contents #surveyFrm fieldset ul li label {}
+.survey_bg .survey .contents #surveyFrm fieldset ul li label img {
+    margin-bottom: 20px; border:1px solid #000; 
+    width:130px; height:250px;
+}
+.survey_bg .survey .contents #surveyFrm fieldset ul li label input {
+    display:block; width: 30px; height: 30px; align-self: center;
+    appearance: none; margin:0 auto;
+    background:url(../images/png/unchecked.png);
+}
+.survey_bg .survey .contents #surveyFrm fieldset ul li label input:checked {
+    background:url(../images/png/checkbox.png);
+}
+.survey_bg .survey .contents #surveyFrm fieldset #answer_btn {
+    font-size:1.333rem; color:#fff; background: #093f77; padding:15px 30px;
+    margin-top:50px;
+}
